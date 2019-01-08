@@ -67,7 +67,7 @@ public class Localization {
     /**
         Remote server address
     */
-    public static var server:String = "https://getfilter.xyz/language";
+    public static var server:String = "https://getfilter.xyz";
     
     
     /**
@@ -400,7 +400,7 @@ public class Localization {
         loadLanguageFromDisk(code: language.key);
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
-        let urlString = Localization.server+"/\(language.key)"
+        let urlString = Localization.server+"/language/\(language.key)"
         guard let url = URL(string: urlString as String)else{
             return
         }
